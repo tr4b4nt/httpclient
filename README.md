@@ -1,3 +1,5 @@
+Fork - with option to disable warnings about Cookie#domain [pull request](https://github.com/nahi/httpclient/pull/265)
+
 httpclient - HTTP accessing library.  [![Gem Version](https://badge.fury.io/rb/httpclient.svg)](http://badge.fury.io/rb/httpclient)
 
 Copyright (C) 2000-2015  NAKAMURA, Hiroshi  <nahi@ruby-lang.org>.
