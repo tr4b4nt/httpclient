@@ -197,7 +197,7 @@ class WebAgent
     alias original_domain domain
 
     def domain
-      warning('Cookie#domain returns dot-less domain name now. Use Cookie#dot_domain if you need "." at the beginning.')
+      warning('Cookie#domain returns dot-less domain name now. Use Cookie#dot_domain if you need "." at the beginning.') if log_http_cookie_warnings?
       self.original_domain
     end
 
@@ -213,6 +213,10 @@ class WebAgent
     end
   end
 end
+  
+  def log_http_cookie_warnings?
+    ENV['HTTPCLIENT_LOG_HTTP_COOKIE_WARNING'] != "disabled"
+  end
 
 rescue LoadError
   require 'httpclient/webagent-cookie'
